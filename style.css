@@ -60,6 +60,18 @@ body {
     display: block;
 }
 
+@media screen and (min-width: 768px){
+    .botoes{
+        display: flex;
+    }  
+    .botao:first-child{
+        border-radius: 40px 0 0 0;
+    }
+    .botao:last-child{
+        border-radius: 0 40px 0 0;
+    }
+}
+
 .botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
@@ -84,25 +96,32 @@ body {
     text-align: center;
 }
 
-.aba-conteudo-titulo-secundario{
+.aba-conteudo-titulo-secundario {
     text-align: center;
     color: var(--verde);
     text-transform: uppercase;
 }
 
 .contador {
-    font-size: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-@media screen and (min-width: 768px) {
-    .botoes{
-    display:flex;
-    }
-    .botao:first-child {
-    border-radius: 40px 0 0 0;
-    }
-    .botao:last-child {
-    border-radius: 0 40px 0 0;
-    }
+.contador-digito {
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+
+.contador-digito-numero{
+    font-size: 80px;
+    margin: 0;
+}
+
+.contador-digito-texto{
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+
 }
